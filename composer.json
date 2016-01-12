@@ -1,0 +1,34 @@
+{
+  "name": "voskobovich/yii2-pnotify",
+  "description": "PNotify widget for Yii2",
+  "keywords": [
+    "pnotify",
+    "widget",
+    "notification",
+    "yii2"
+  ],
+  "homepage": "https://github.com/voskobovich/yii2-pnotify",
+  "type": "yii2-widget",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/voskobovich/yii2-pnotify/issues",
+    "source": "https://github.com/voskobovich/yii2-pnotify"
+  },
+  "authors": [
+    {
+      "name": "Vitaly Voskobovich",
+      "email": "vitaly@voskobovich.com",
+      "homepage": "http://voskobovich.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "*",
+    "bower-asset/pnotify": "~3.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "voskobovich\\pnotify\\widgets\\": "src"
+    }
+  }
+}
