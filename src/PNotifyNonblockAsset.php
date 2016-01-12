@@ -14,4 +14,14 @@ class PNotifyNonblockAsset extends AssetBundle
     public $js = [
         'pnotify.nonblock.js'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        parent::init();
+
+        $this->depends[] = 'voskobovich\pnotify\widgets\PNotifyAsset';
+    }
 }

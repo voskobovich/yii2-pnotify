@@ -21,4 +21,14 @@ class PNotifyButtonsAsset extends AssetBundle
     public $js = [
         'pnotify.buttons.js'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        parent::init();
+
+        $this->depends[] = 'voskobovich\pnotify\widgets\PNotifyAsset';
+    }
 }

@@ -49,7 +49,9 @@ class PNotify extends Widget
     {
         parent::init();
 
-        $this->registerClientScript();
+        if (!$this->text) {
+            throw new InvalidArgumentException('Param "text" can not be empty.');
+        }
     }
 
     /**
@@ -57,35 +59,26 @@ class PNotify extends Widget
      */
     public function run()
     {
-        $this->createNotification([
-            'title' => $this->title,
-            'text' => $this->text,
-            'type' => $this->type,
-        ]);
+        $this->registerClientScript();
+
+        $this->createNotification();
     }
 
     /**
      * Create notification
-     * @param array $data
      */
-    protected function createNotification($data)
+    protected function createNotification()
     {
-        $options = [];
+        $options = [
+            'text' => $this->text
+        ];
 
-        $text = ArrayHelper::getValue($data, 'text');
-        if (!$text) {
-            throw new InvalidArgumentException('Param "items" can not be empty.');
-        }
-        $options['text'] = $text;
-
-        $title = ArrayHelper::getValue($data, 'title');
-        if ($title) {
-            $options['title'] = $title;
+        if ($this->title) {
+            $options['title'] = $this->title;
         }
 
-        $type = ArrayHelper::getValue($data, 'type');
-        if ($type) {
-            $options['type'] = $type;
+        if ($this->type) {
+            $options['type'] = $this->type;
         }
 
         $options = ArrayHelper::merge($this->clientOptions, $options);

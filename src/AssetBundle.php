@@ -12,4 +12,11 @@ abstract class AssetBundle extends \yii\web\AssetBundle
      * @inheritdoc
      */
     public $sourcePath = '@bower/pnotify/dist';
+
+    /**
+     * @inheritdoc
+     */
+    public $depends = [
+        'yii\web\JqueryAsset'
+    ];
 }

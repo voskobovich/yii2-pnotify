@@ -14,4 +14,14 @@ class PNotifyDesktopAsset extends AssetBundle
     public $js = [
         'pnotify.desktop.js'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        parent::init();
+
+        $this->depends[] = 'voskobovich\pnotify\widgets\PNotifyAsset';
+    }
 }

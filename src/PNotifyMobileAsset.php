@@ -21,4 +21,14 @@ class PNotifyMobileAsset extends AssetBundle
     public $js = [
         'pnotify.mobile.js'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        parent::init();
+
+        $this->depends[] = 'voskobovich\pnotify\widgets\PNotifyAsset';
+    }
 }

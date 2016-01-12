@@ -14,4 +14,14 @@ class PNotifyBrightthemeAsset extends AssetBundle
     public $css = [
         'pnotify.brighttheme.css'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public function init()
+    {
+        parent::init();
+
+        $this->depends[] = 'voskobovich\pnotify\widgets\PNotifyAsset';
+    }
 }
