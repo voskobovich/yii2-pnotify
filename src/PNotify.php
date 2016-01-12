@@ -74,7 +74,7 @@ class PNotify extends Widget
 
         $text = ArrayHelper::getValue($data, 'text');
         if (!$text) {
-            throw new InvalidArgumentException('Missing text param.');
+            throw new InvalidArgumentException('Param "items" can not be empty.');
         }
         $options['text'] = $text;
 
