@@ -23,7 +23,7 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "yiisoft/yii2": "*",
+    "yiisoft/yii2": "~2.0.0",
     "bower-asset/pnotify": "~3.0.0"
   },
   "autoload": {
