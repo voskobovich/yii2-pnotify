@@ -54,17 +54,22 @@ class PNotifyHelper
     }
 
     /**
-     * @param array $clientOptions
+     * @param array $options
      * @param array $depends
      */
-    public static function showAll($clientOptions = [], $depends = [])
+    public static function showAll($options = [], $depends = [])
     {
-        $items = Yii::$app->session->getAllFlashes();
-        foreach ($items as $key => $json) {
-            $data = Json::decode($json);
-            $data['clientOptions'] = $clientOptions;
-            $data['depends'] = $depends;
-            PNotify::widget($data);
+        $flashes = Yii::$app->session->getAllFlashes();
+
+        foreach ($flashes as $key => $items) {
+            foreach ($items as $json) {
+                $data = Json::decode($json);
+                if (!empty($options[$data['type']])) {
+                    $data['clientOptions'] = $options[$data['type']];
+                }
+                $data['depends'] = $depends;
+                PNotify::widget($data);
+            }
         }
     }
 }
