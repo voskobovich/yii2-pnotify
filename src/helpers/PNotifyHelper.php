@@ -63,7 +63,7 @@ class PNotifyHelper
 
         foreach ($flashes as $key => $items) {
 
-            if (strpos($flashes, 'pnotify:') === false) {
+            if (strpos($key, 'pnotify:') === false) {
                 continue;
             }
 
