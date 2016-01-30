@@ -62,6 +62,11 @@ class PNotifyHelper
         $flashes = Yii::$app->session->getAllFlashes();
 
         foreach ($flashes as $key => $items) {
+
+            if (strpos($flashes, 'pnotify:') === false) {
+                continue;
+            }
+
             foreach ($items as $json) {
                 $data = Json::decode($json);
                 if (!empty($options[$data['type']])) {
