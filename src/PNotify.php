@@ -1,6 +1,6 @@
 <?php
 
-namespace voskobovich\pnotify\widgets;
+namespace voskobovich\pnotify;
 
 use InvalidArgumentException;
 use yii\base\Widget;
@@ -10,7 +10,7 @@ use yii\helpers\Json;
 
 /**
  * Class PNotify
- * @package voskobovich\pnotify\widgets
+ * @package voskobovich\pnotify
  */
 class PNotify extends Widget
 {

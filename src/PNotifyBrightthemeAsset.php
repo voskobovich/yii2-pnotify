@@ -1,10 +1,10 @@
 <?php
 
-namespace voskobovich\pnotify\widgets;
+namespace voskobovich\pnotify;
 
 /**
  * Class PNotifyBrightthemeAsset
- * @package voskobovich\pnotify\widgets
+ * @package voskobovich\pnotify
  */
 class PNotifyBrightthemeAsset extends AssetBundle
 {
@@ -22,6 +22,6 @@ class PNotifyBrightthemeAsset extends AssetBundle
     {
         parent::init();
 
-        $this->depends[] = 'voskobovich\pnotify\widgets\PNotifyAsset';
+        $this->depends[] = 'voskobovich\pnotify\PNotifyAsset';
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace voskobovich\pnotify\widgets;
+namespace voskobovich\pnotify;
 
 /**
  * Class PNotifyAnimateAsset
- * @package voskobovich\pnotify\widgets
+ * @package voskobovich\pnotify
  */
 abstract class AssetBundle extends \yii\web\AssetBundle
 {

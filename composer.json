@@ -28,8 +28,8 @@
   },
   "autoload": {
     "psr-4": {
-      "voskobovich\\pnotify\\widgets\\": "src",
-      "voskobovich\\pnotify\\widgets\\helpers\\": "src/helpers"
+      "voskobovich\\pnotify": "src",
+      "voskobovich\\pnotify\\helpers\\": "src/helpers"
     }
   }
 }

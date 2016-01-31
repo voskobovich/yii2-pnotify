@@ -1,15 +1,15 @@
 <?php
 
-namespace voskobovich\pnotify\widgets\helpers;
+namespace voskobovich\pnotify\helpers;
 
-use voskobovich\pnotify\widgets\PNotify;
+use voskobovich\pnotify\PNotify;
 use Yii;
 use yii\helpers\Json;
 
 
 /**
  * Class PNotifyHelper
- * @package voskobovich\pnotify\widgets\helpers
+ * @package voskobovich\pnotify\helpers
  */
 class PNotifyHelper
 {
